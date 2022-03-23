@@ -1,0 +1,246 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --back: #22212c;
+  --card_back: #302f3d;
+  --buttons: #cb92b1;
+  --circle:#00ff00;
+  --text: #837e9f;
+
+}
+html{
+  font-size: 62.5%;
+}
+
+body{
+  /* width: 80vw; */
+  margin: 4rem 4rem;
+  background: var(--back);
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  justify-content: start;
+  font-family:"Merriweather Sans",sans-serif ;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 3rem 3rem;
+  grid-template-areas: 
+  'profile my-projects my-projects'
+  'profile project-1 project-2'
+  'links recent-posts recent-posts'
+  'links post post'
+  'technologies technologies technologies'
+  'experiences experiences experiences'
+  'experiences experiences experiences'
+  'education education education'
+  'education education education'
+  'footer footer footer'
+
+  ;
+}
+.card{
+  width: 100%;
+  height: 100%;
+color: var(--text);
+background: var(--card_back);
+box-shadow: 1px 4px 4px 1px rgba(0,0,0, 0.25);
+border-radius: 2rem;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:0rem 2rem;
+}
+.profile{
+  grid-area: profile;
+  width: 34.8rem;
+  height: 29.2rem;
+  
+ 
+}
+.profile img{
+  border: .3rem solid var(--circle);
+  border-radius: 50%;
+  width: 12.8rem;
+  height: 12.8rem;
+  margin-top: 3.2rem;
+}
+.profile p{
+  margin-top: 3.2rem;
+}
+.profile  h1{
+
+  line-height: 2.9rem;
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+.profile h2{
+  line-height: 1.6rem;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+.links{
+  grid-area: links;
+  width: 34.8rem;
+  height: 34.8rem;
+  padding: 2rem;
+  line-height: 1.6rem;
+  font-size: 1.3rem;
+  align-items: flex-start;
+  
+}
+.links ul li svg{
+  margin-right: 1rem;
+}
+.links ul li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  list-style:  none;
+}
+
+.technologies{
+  grid-area: technologies;
+  width: 34.8rem;
+  height: 20.8rem;
+  align-items: flex-start;
+  padding: 2rem;
+}
+.technologies table{
+  margin-top: 1rem;
+  border-collapse: separate;
+  border-spacing: 1rem;
+}
+
+.technologies td{
+  width: 8.6rem;
+  height: 2.4rem;
+  font-weight: 700;
+  line-height: 1.27rem;
+  color: black;
+  background: var(--buttons);
+  border-radius:2rem 2rem;
+  
+  text-align: center;
+  
+}
+.experiences{
+  grid-area: experiences;
+  width: 34.8rem;
+  height: 34.9rem;
+  align-items: flex-start;
+  padding: 2rem;
+}
+.experiences ul li{
+ margin: 2rem;
+}
+.my-projects{ 
+grid-area: my-projects;
+height:8.6rem;
+flex-direction: row;
+justify-content: space-between;
+
+}
+.recent-posts{
+  grid-area:recent-posts;
+  height:8.6rem;
+  flex-direction: row;
+  
+  justify-content: flex-start;
+}
+.post{
+  grid-area:post;
+  height: 20.1rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.post img{
+  width: 12.8rem;
+  height: 12.8rem;
+  border-radius: 50%;
+}
+.post div{
+  height: 12.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-1 {
+  grid-area: project-1;
+  width: 100%;
+  height: 18.6rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding: 2rem;
+  
+}
+.project-2 {
+  grid-area: project-1;
+  width: 100%;
+  height: 18.6rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding: 2rem;
+  
+}
+.project-1 p{
+  line-height: 2rem;
+  font-size: 1.4rem;
+}
+.project-2 p{
+  line-height: 2rem;
+  font-size: 1.4rem;
+}
+.box{
+  width: 100%;
+  display: flex;
+  
+}
+.icons{
+  width: 100%;
+  display: flex;  
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  gap: .51rem;
+  justify-items: start;
+}
+
+
+.project-2{
+  grid-area: project-2;
+  height: 18.6rem;
+}
+.education{
+  grid-area: education;
+  width: 34.8rem;
+  height: 35.2rem;
+  align-items: flex-start;
+  padding: 2rem;
+}
+.education ul li{
+  margin: 2rem;
+}
+
+.circle{
+  width: 1.9rem;
+  height: 1.9rem;
+  background: #E7DE79;
+  border-radius: 50%;
+  border: .2rem solid white;
+  margin: -.1rem 1rem 1rem -10rem;
+}
+.footer{
+  grid-area: footer;
+  width: 100%;
+  text-align: center;
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 2rem;
+  
+}
